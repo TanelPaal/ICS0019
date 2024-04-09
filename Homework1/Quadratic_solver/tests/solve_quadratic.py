@@ -5,7 +5,7 @@ class TestQuadraticSolver(unittest.TestCase):
     def test_positive_discriminant(self):
         self.assertEqual(QuadraticS(1, -3, 2), (2.0, 1.0))
         self.assertEqual(QuadraticS(1, -5, 6), (3.0, 2.0))
-        self.assertEqual(QuadraticS(1, -6, 9), (3.0))
+        self.assertEqual(QuadraticS())
 
     def test_zero_discriminant(self):
         self.assertEqual(QuadraticS(1, -2, 1), (1.0))
