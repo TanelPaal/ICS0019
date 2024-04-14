@@ -1,5 +1,6 @@
 import tkinter as tk
-from Homework1.Quadratic_solver.src.quadratic_solver.quadratic_solver import solve_quadratic
+from quadratic_solver_tanpaa.quadratic_solver import solve_quadratic
+
 
 
 def calculate():
@@ -7,10 +8,14 @@ def calculate():
     b = float(b_entry.get())
     c = float(c_entry.get())
     result = solve_quadratic(a, b, c)
-    result_label.config(text=str(result))
+    if isinstance(result, tuple):
+        result_label.config(text=f"x1: {result[0]}, x2: {result[1]}")
+    else:
+        result_label.config(text=str(result))
 
 root = tk.Tk()
 root.geometry("600x300")  # Set the window size to 300 pixels wide and 200 pixels tall
+root.title("Quadratic Solver")
 
 a_label = tk.Label(root, text="Enter a:", font=("Arial", 18))
 a_label.pack()
