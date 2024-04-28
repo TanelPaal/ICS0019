@@ -1,3 +1,3 @@
 # located in project root folder
 
-quadratic_solver_tanpaa
+quadratic_solver_tanpaa==0.0.1
